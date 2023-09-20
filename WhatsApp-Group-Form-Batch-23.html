@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,12 +16,12 @@
     <!-- Latest compiled JavaScript -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/date.js"></script>
+    <script src="js/main.js"></script>
     <!-- Box Icons Links -->
     <script src="https://kit.fontawesome.com/89b3df4f3f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <!-- Nav -->
     <nav class="navbar navbar-dark bg-dark text-white">
         <div class="container-fluid">
@@ -61,36 +62,77 @@
         </div>
     </nav>
 
-
-    <!-- Main -->
+    <script type="text/javascript">var submitted = false</script>
+    <iframe src="submission.html" name="hiddenConfirm" id="hiddenConfirm" onload="if(submitted){window.location='submission.html'}" frameborder="0"></iframe>
     <main>
-        <header>
-            <h1 class="p-4 text-decoration align-text-center">Department Of AI & ML</h1>
-        </header>
-        <h6 class="p-2 align-text-center">
-            <a href="WhatsApp-Group-Form-Batch-23.html">Click Here to Fill the Form To Join WhatsApp Group</a>
-        </h6>
-        <section class="container-sm">
-            <header>
-                <h2 class="p-2 text-decoration">Recents Activites</h2>
-            </header>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="contents/AIdeathon/AIdeathon-Poster.png" class="img-fluid rounded-start" alt="AIdeathon Poster">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">AIdeathon</h5>
-                      <p class="card-text">Abstract Submission Deadline 24th September, 2023</p>
-                      <p class="card-text"><small class="text-muted">Last updated on 19th September,2023</small></p>
+        <section>
+            <br><br>
+            <h1 id="h1">Global Academy Of Technology</h1>
+            <br>
+            <img src="contents/Gat-Banner.png" class="rounded img-main" alt="Global Academy Of Technology Banner">
+            <br>
+            <h3 id="h1">Form For WhatsApp Group Joining</h3>
+            <br><br>
+        </section>
+        <section class="container forms">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScKgnjN3vZPcS5m0PhmqBP8E_w_L0aydl50OesNIUrLV7VWzg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true">
+                <div class="row mb-3">
+                    <div class="col-sm-5">
+                        <label for="USNNo" class="form-label"><h2>USN Number</h2></label>
                     </div>
-                  </div>
+                    <div class="col-sm-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text m-1" id="basic-addon1">1GA23AI</span>
+                            <input name="entry.532727287" type="text" id="USNNo" class="form-control m-1" placeholder="USN Number" required="required">
+                            <span class="input-group-text m-1" id="basic-addon1">-T</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-6">
+                        <div class="form-text m-1" style="align-content: center;"><h4>Enter the Correct USN Number</h4></div>
+                    </div>
                 </div>
-              </div>
+                <div class="row mb-3">
+                    <div class="col-sm-5">
+                        <label for="username" class="form-label"><h2>Name</h2></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input name="entry.771626504" type="text" id="username" class="form-control" placeholder="Username" required="required">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-5">
+                        <label for="PhoneNo" class="form-label"><h2>Phone Number</h2></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text m-1" id="basic-addon2">+91</span>
+                            <input name="entry.937105894" type="number" id="PhoneNo" class="form-control m-1" placeholder="Phone Number" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-5">
+                        <label for="Email" class="form-label"><h2>Email</h2></label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group mb-3">
+                            <input name="entry.693368388" type="email" id="Email" class="form-control m-1" placeholder="E-Mail" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-7">
+                            <div class="form-text m-1" style="align-content: center;"><h4>Enter the Correct Details once submitted nthg can be changed</h4></div>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-primary btn-block w-100" type="submit">Submit</button>
+                <br><hr><br>
+            </form>
         </section>
     </main>
-
 
     <!-- Footer -->
     <footer>
@@ -122,10 +164,6 @@
         </center>
     </footer>
 
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
 
 </body>
-
 </html>
