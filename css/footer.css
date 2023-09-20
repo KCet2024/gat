@@ -324,6 +324,31 @@ hr {
     border-radius: 5rem;
 }
 
+.align-text-center {
+    text-align: center;
+}
+
+.text-decoration {
+    text-decoration: underline;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.bold {
+    text-decoration: underline;
+    font-family: serif;
+    font-weight: bolder;
+}
+
+.submit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
 #loader {
     position: absolute;
     left: 50%;
