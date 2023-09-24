@@ -422,6 +422,59 @@ hr {
     text-align: center;
 }
 
+.Scheme {
+    align-items: center;
+    justify-content: center;
+}
+
+.Scheme-h2{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.Scheme-h4{
+    font-family: Montserrat-Bold;
+    font-weight: 700;
+    color: #5da8ff;
+}
+
+.Scheme-h4 a{
+    text-decoration: none;
+}
+
+.dot{
+    font-weight: 900;
+    color: #000000;
+    display: inline-flex;
+}
+
+.text-decoration-ul{
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 700;
+}
+
+.text-decoration-none{
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width:360px) {
     .navbar-brand img {
         width: 250px;
