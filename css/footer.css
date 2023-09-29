@@ -461,6 +461,10 @@ hr {
     color: white;
 }
 
+.iframe {
+    width: 100%;
+    height: 250px;
+}
 
 
 
@@ -497,6 +501,10 @@ hr {
 @media (min-width:768px) {
     .dply-1 {
         display: flex;
+    }
+    .iframe {
+        width: 90%;
+        height: 500px;
     }
 }
 
