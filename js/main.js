@@ -1,10 +1,4 @@
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 30);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
+document.getElementById('youtube').addEventListener('click', function () {
+  var targetUrl = "https://www.youtube.com/@Gat-AI-ML/videos";
+  window.location.href = targetUrl ;
+});
