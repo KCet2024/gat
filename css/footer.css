@@ -496,8 +496,12 @@ hr {
     border-color: #000000;
 }
 
-.cenetr {
+.center {
     justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    align-content: center;
 }
 
 
