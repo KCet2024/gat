@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Code Theme</title>
+    <style>
+        body {
+            background-size: cover;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/009/329/011/non_2x/binary-code-background-digital-binary-data-with-streaming-digital-code-futuristic-cyberspace-concept-of-coding-or-hacker-crypto-data-dark-blue-gradient-background-vector.jpg');
+            background-size: cover;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(55, 61, 73, 0.8);
+            /* Transparent background color */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 100px auto;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .countdown {
+            font-size: 24px;
+        }
+
+        .code {
+            background-color: #1f232b;
+            color: #61dafb;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>We are working on something awesome. Stay tuned!</p>
+        <div class="countdown" id="countdown">00:00:00</div>
+        <p>Meanwhile, here's a sneak peek of our code:</p>
+        <div class="code">
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+    </div>
+
+    <script>
+        // Replace the following date with your desired launch date and time (in UTC)
+        const launchDate = new Date('2023-11-13T14:30:00Z').getTime();
+
+        const countdown = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+
+            if (timeLeft < 0) {
+                countdown.innerHTML = 'We are live!';
+            } else {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
