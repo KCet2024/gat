@@ -30,15 +30,16 @@ fetch('events.json')
         if (events.length === 0) {
             eventListContainer.innerHTML = '<p>No events available.</p>';
         } else {
-            eventListContainer.innerHTML = '<h2>Upcoming Event</h2>';
+            eventListContainer.innerHTML = '<h2 class="text-white"><b>Upcoming Event</b></h2>';
             
             events.forEach(event => {
                 eventListContainer.innerHTML += `
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">${event.title}</h5><br>
+                            <h6 class="card-title">${event.title}</h6><br>
                             <p class="card-text"><strong>Session Code:</strong> ${event.code}</p>
                             <p class="card-text"><strong>Date:</strong> ${event.date}</p>
+                            <p class="card-text"><strong>Session Lead By: ${event.host}</strong></p>
                             <p class="card-text"><strong>Google Meet Link: </strong><a id="conditionalLink" href="#" onclick="checkDateTime()">Click Here To Join For Google Meet</a></p>
                             <p class="card-text"><strong>OverView Of The Session: </strong><a href="${event.brocher}" target="_Blank">Click Here To See</a></p>
                             <p class="card-text"><strong>PPT Of The Session: </strong><a href="${event.ppt}" target="_Blank">Click Here To See</a></p>
@@ -52,12 +53,11 @@ fetch('events.json')
     
     function checkDateTime() {
         const currentDate = new Date();
-        const startDate = new Date("2023-11-29T13:45:00"); // December 1, 2023, 8:00 AM
-        const endDate = new Date("2023-11-29T16:45:00");   // December 10, 2023, 6:00 PM
+        const startDate = new Date("2023-11-29T13:45:00");
+        const endDate = new Date("2023-11-29T16:45:00");   
 
         if (currentDate >= startDate && currentDate <= endDate) {
-            // Allow the link to be opened
-            window.open("https://meet.google.com/", "_blank"); // Replace with your actual link
+            window.open("https://meet.google.com/uuf-xufw-cnx", "_blank");
         } else {
             alert("The link is only available between 29 Nov, 2023, 1:45 PM to 4:45 PM.");
         }

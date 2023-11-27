@@ -4,14 +4,13 @@ fetch('users.json')
     .then(users => {
         // Display user details in the admin dashboard
         const userListContainer = document.getElementById('userList');
-        userListContainer.innerHTML = '<h3>User List:</h3>';
+        userListContainer.innerHTML = '<h3><b>Enrolled Students:</b></h3><br>';
 
         users.forEach(user => {
             userListContainer.innerHTML += `
-                <div class="card mb-3">
+                <div class="card mb-1">
                     <div class="card-body">
-                        <h5 class="card-title">${user.name}</h5>
-                        <p class="card-text"><strong>Email:</strong> ${user.email}</p>
+                        <p class="card-title">${user.name} (${user.id})</p>
                     </div>
                 </div>
             `;

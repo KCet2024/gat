@@ -549,6 +549,12 @@ hr {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+
+.background-radial-gradient2{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,202,253,1) 100%);
+}
+
 .background-radial-gradient {
     background-color: hsl(218, 41%, 15%);
     background-image: radial-gradient(650px circle at 0% 0%,
@@ -563,7 +569,10 @@ hr {
             hsl(218, 41%, 20%) 75%,
             hsl(218, 41%, 19%) 80%,
             transparent 100%);
+            /* background: rgb(2,0,36);
+            background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%); */
 }
+
 
 #radius-shape-1 {
     height: 220px;

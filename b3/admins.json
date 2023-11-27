@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1GA23AI",
+        "username": "Admin",
+        "password": "ADMIN@123",
+        "name": "Admin",
+        "email": "gataiml2327@gmail.com"
+    },
+    {
+        "id": "1GA23AI000",
+        "username": "HOD",
+        "password": "ADMIN@123",
+        "name": "Preethi Mam",
+        "email": "preethi@gmail.com"
+    },
+    {
+        "id": "1GA23AI000-T",
+        "username": "CON",
+        "password": "ADMIN@123",
+        "name": "Shanu Bino Mam",
+        "email": "shanubino@gmail.com"
+    }
+]

@@ -16,7 +16,7 @@ fetch('users.json')
             <h2> ${loggedInUser.name}, Welcome to Your Dashboard</h2>
             <p><strong>USN:</strong> ${loggedInUser.username}</p>
             <p><strong>Email:</strong> ${loggedInUser.email}</p>
-            <p class="card-text"><strong>FeedBack Form Link: </strong><a href="https://docs.google.com/forms/d/e/1FAIpQLScHzwr4rx1gdEpATJzHeVFNQH2WULUnHmlElroEMtqlfvmJwA/viewform?usp=pp_url&entry.1646666979=${loggedInUser.id}&entry.35432092=${loggedInUser.name}" target="_Blank">Click Here To Fill the FeedBack Form</a></p>
+            <p class="card-text"><strong>FeedBack Form Link: </strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSfr62xRqjjzv-svUftP7pFESkSHJqhowQCvyZRfFXuKQceD-g/viewform?usp=pp_url&entry.1646666979=${loggedInUser.username}&entry.35432092=${loggedInUser.name}&entry.402664451=${loggedInUser.email}" target="_Blank">Click Here To Fill the FeedBack Form</a></p>
             <p><a href="events.html">Click Here To See Upcoming Events</a></p>
         `;
     } else {

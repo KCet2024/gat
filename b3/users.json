@@ -68,5 +68,33 @@
         "password": "GAT@123",
         "name": "Manishankar D Bhat",
         "email": "manishankardbhat2005@gmail.com"
+    },
+    {
+        "id": "1GA23AI048-T",
+        "username": "1GA23AI048-T",
+        "password": "GAT@123",
+        "name": "Yashaswi P M",
+        "email": "yashaswipm2006@gmail.com"
+    },
+    {
+        "id": "1GA23AI027-T",
+        "username": "1GA23AI027-T",
+        "password": "GAT@123",
+        "name": "Rashmitha S P",
+        "email": "rashmithasp85@gmail.com"
+    },
+    {
+        "id": "1GA23CS158-T",
+        "username": "1GA23CS158-T",
+        "password": "GAT@123",
+        "name": "Aditya",
+        "email": "adityaloddnor001@gamil.com"
+    },
+    {
+        "id": "1GA23CS160-T",
+        "username": "1GA23CS160-T",
+        "password": "GAT@123",
+        "name": "Prafful",
+        "email": "praffuljayaram123@gmail.com"
     }
 ]
