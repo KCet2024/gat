@@ -32,7 +32,6 @@ fetch('events.json')
                     <td>${event.date}</td>
                     <td><a href="${event.brocher}" target="_Blank">Click Here To See</a></td>
                     <td><a href="${event.ppt}" target="_Blank">Click Here To See</a></td>
-                    <td>${event.host}</td>
                 </tr>
             `;
         });
