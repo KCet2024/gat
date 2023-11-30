@@ -4,7 +4,7 @@
         "id": "1GA23AI011-T",
         "username": "1GA23AI011-T",
         "password": "GAT@B3011",
-        "name": "Madhu Sudan",
+        "name": "Madhusudan",
         "email": "madhuradha43@gmail.com",
         "phone": "8105824492",
         "dept": "AI & ML"
@@ -55,7 +55,7 @@
         "username": "1GA23AI029-T",
         "password": "GAT@B3029",
         "name": "Bhuvan A R",
-        "email": "bhuvan.ar01@gmail.com",
+        "email": "bhuvan.ar0101@gmail.com",
         "phone": "8317462097",
         "dept": "AI & ML"
     },
@@ -84,7 +84,7 @@
         "id": "1GA23AI035-T",
         "username": "1GA23AI035-T",
         "password": "GAT@B3035",
-        "name": "Aditi",
+        "name": "Aditi S Yaranal",
         "email": "syaranaladiti@gmail.com",
         "phone": "8971459536",
         "dept": "AI & ML"
@@ -94,7 +94,7 @@
         "id": "1GA23AI046-T",
         "username": "1GA23AI046-T",
         "password": "GAT@B3046",
-        "name": "Niyathi",
+        "name": "Niyathi Nagesh",
         "email": "niyathi264@gmail.com",
         "phone": "9606240516",
         "dept": "AI & ML"
@@ -124,8 +124,8 @@
         "id": "1GA23AI051-T",
         "username": "1GA23AI051-T",
         "password": "GAT@B3051",
-        "name": "Jhenkar",
-        "email": "",
+        "name": "Jhenkar C",
+        "email": "jhenkarc05@gmail.com",
         "phone": "7892046964",
         "dept": "AI & ML"
     },
@@ -135,7 +135,7 @@
         "username": "1GA23AI064-T",
         "password": "GAT@B3064",
         "name": "Yashavantha",
-        "email": "",
+        "email": "yashuyashavantha85@gmail.com",
         "phone": "8867287040",
         "dept": "AI & ML"
     },
@@ -194,7 +194,7 @@
         "id": "1GA23CV029-T",
         "username": "1GA23CV029-T",
         "password": "GAT@B3029",
-        "name": "Vidya Shree U C",
+        "name": "Vidyashree U C",
         "email": "dryfruit1922@gmail.com",
         "phone": "6362548263",
         "dept": "CV"
@@ -228,5 +228,35 @@
         "email": "siri28042005@gmail.com",
         "phone": "7259343558",
         "dept": "ISE"
+    },
+    {
+        "slno": "24",
+        "id": "1GA23EC009-T",
+        "username": "1GA23EC009-T",
+        "password": "GAT@B3009",
+        "name": "Deeptha",
+        "email": "deepthanataraj2005@gmail.com",
+        "phone": "9019135246",
+        "dept": "EEE"
+    },
+    {
+        "slno": "25",
+        "id": "1GA23EC053-T",
+        "username": "1GA23EC053-T",
+        "password": "GAT@B3053",
+        "name": "Anjali",
+        "email": "anjaligudlanur@gmail.com",
+        "phone": "9019135246",
+        "dept": "EEE"
+    },
+    {
+        "slno": "26",
+        "id": "1GA23EC099-T",
+        "username": "1GA23EC099-T",
+        "password": "GAT@B3099",
+        "name": "Aditi Rajesh",
+        "email": "aditirshwetha@gmail.com",
+        "phone": "8147953199",
+        "dept": "EEE"
     }
 ]
