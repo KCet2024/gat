@@ -1,19 +1,41 @@
-// Fetching data from JSON file (replace with your actual JSON file path)
+// admin_dashboard.js - Admin Dashboard script
+
+// Fetch user data from JSON file (replace with your actual JSON file path)
 fetch('users.json')
     .then(response => response.json())
     .then(users => {
-        // Display user details in the admin dashboard
-        const userListContainer = document.getElementById('userList');
-        userListContainer.innerHTML = '<h3><b>Enrolled Students:</b></h3><br>';
-
+        // Populate the User Table
+        const userTableBody = document.getElementById('userTableBody');
         users.forEach(user => {
-            userListContainer.innerHTML += `
-                <div class="card mb-1">
-                    <div class="card-body">
-                        <p class="card-title">${user.name} (${user.id})</p>
-                    </div>
-                </div>
+            userTableBody.innerHTML += `
+                <tr>
+                    <td>${user.username}</td>
+                    <td>${user.name}</td>
+                    <td>${user.dept}</td>
+                </tr>
             `;
         });
     })
-    .catch(error => console.error('Error fetching data:', error));
+    .catch(error => console.error('Error fetching user data:', error));
+
+// Fetch events data from JSON file (replace with your actual JSON file path)
+fetch('events.json')
+    .then(response => response.json())
+    .then(events => {
+        // Populate the Event Table
+        const eventTableBody = document.getElementById('eventTableBody');
+        events.forEach(event => {
+            eventTableBody.innerHTML += `
+                <tr>
+                    <td>${event.code}</td>
+                    <td>${event.title}</td>
+                    <td>${event.date}</td>
+                    <td><a href="${event.brocher}" target="_Blank">Click Here To See</a></td>
+                    <td><a href="${event.ppt}" target="_Blank">Click Here To See</a></td>
+                    <td>${event.host}</td>
+                </tr>
+            `;
+        });
+    })
+    .catch(error => console.error('Error fetching events data:', error));
+
