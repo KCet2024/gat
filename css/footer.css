@@ -549,10 +549,16 @@ hr {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.h-100{
+    height: 550px !important;
+}
 
 .background-radial-gradient2{
     background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,202,253,1) 100%);
+    background: -moz-linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(9,9,121,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(9,9,121,1) 100%);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(9,9,121,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#090979",GradientType=1);
 }
 
 .background-radial-gradient {
@@ -598,39 +604,83 @@ hr {
     backdrop-filter: saturate(200%) blur(25px);
 }
 
+.custom-shape-divider-bottom-1701626136 {
+    position: absolute;
+    /* bottom: -50px; */
+    top: 500px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1701626136 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
 
+.custom-shape-divider-bottom-1701626136 .shape-fill {
+    fill: #86BEFF;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width:275px) {
-    .navbar-brand img {
-        width: 170px;
-        height: 30px;
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1701626136 svg {
+        width: calc(100% + 1.3px);
+        height: 184px;
     }
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width:160px) {
-    /* .navbar-brand img {
-        width: 250px;
+    .navbar-brand img {
+        width: 120px;
         height: 30px;
-    } */
+    }
     .container-fluid img {
         width: 50px;
         height: 50px;
@@ -651,10 +701,6 @@ hr {
         max-width: 1000px;
         padding: 16px;
     }
-    .navbar-brand img {
-        width: 150px;
-        height: 30px;
-    }
     .footer {
         min-width: 200px;
         width: 80vw;
@@ -666,7 +712,7 @@ hr {
 @media (min-width:360px) {
     .navbar-brand img {
         width: 250px;
-        height: 30px;
+        height: 50px;
     }
     .h-img{
         display: none;
