@@ -17,8 +17,9 @@ fetch('users.json')
             <p><strong>USN:</strong> ${loggedInUser.username}</p>
             <p><strong>Department:</strong> ${loggedInUser.dept}</p>
             <p><strong>Email:</strong> ${loggedInUser.email}</p>
-            <p class="card-text"><strong>FeedBack Form Link: </strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSfr62xRqjjzv-svUftP7pFESkSHJqhowQCvyZRfFXuKQceD-g/viewform?usp=pp_url&entry.1646666979=${loggedInUser.username}&entry.35432092=${loggedInUser.name}&entry.402664451=${loggedInUser.email}" target="_Blank">Click Here To Fill the FeedBack Form</a></p>
-            <p><a href="events.html">Click Here To See Upcoming Events</a></p>
+            <p class="card-text"><strong>FeedBack Form Link: </strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSfukTMnbGfaSrwefj6c3II9C15NJWDprwbKmbY-rwGkuVUg2Q/viewform?usp=pp_url&entry.1646666979=${loggedInUser.username}&entry.35432092=${loggedInUser.name}&entry.1646666979=${loggedInUser.email}" class="text-white" target="_Blank">Click Here To Fill the FeedBack Form</a></p>
+            <p><a href="events.html" class="text-white">Click Here To See Upcoming Events</a></p>
+            <br><br><br><br><br><br><br><br><br><br>
         `;
     } else {
         // If there is no logged-in user or invalid userId, redirect to the login page

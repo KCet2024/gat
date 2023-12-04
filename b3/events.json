@@ -1,6 +1,14 @@
 [
     {
         "title": "CODING CLUB",
+        "code": "B3S3",
+        "date": "04-12-2023",
+        "brocher": "b3s3br.html",
+        "ppt": "b3s3ppt.html",
+        "host": "Bhuvan A R"
+    },
+    {
+        "title": "CODING CLUB",
         "code": "B3S2",
         "date": "29-11-2023",
         "brocher": "b3s2br.html",
