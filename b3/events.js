@@ -54,7 +54,7 @@ fetch('events.json')
     function checkDateTime() {
         const currentDate = new Date();
         const startDate = new Date("2023-12-06T13:45:00");
-        const endDate = new Date("2023-12-06T04:45:00");   
+        const endDate = new Date("2023-12-06T16:45:00");   
 
         if (currentDate >= startDate && currentDate <= endDate) {
             window.open("https://meet.google.com/uuf-xufw-cnx", "_blank");
