@@ -36,3 +36,22 @@ fetch('b3s2.json')
         });
     })
     .catch(error => console.error('Error fetching events data:', error));
+
+fetch('ccs3.json')
+    .then(response => response.json())
+    .then(events => {
+        // Populate the Event Table
+        const eventTableBody = document.getElementById('form2TableBody');
+        events.forEach(event => {
+            eventTableBody.innerHTML += `
+                <tr>
+                    <td>${event.USN}</td>
+                    <td>${event.Name}</td>
+                    <td>${event.ccs3q1}</td>
+                    <td>${event.ccs3q2}</td>
+                    <td>${event.ccs3q3}</td>
+                </tr>
+            `;
+        });
+    })
+    .catch(error => console.error('Error fetching events data:', error));
