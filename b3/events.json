@@ -1,7 +1,15 @@
 [
     {
         "title": "CODING CLUB",
-        "code": "B3S3",
+        "code": "CCS4",
+        "date": "11-12-2023",
+        "brocher": "ccs4br.html",
+        "ppt": "ccs4ppt.html",
+        "host": "Bhuvan A R & Sahana Y"
+    },
+    {
+        "title": "CODING CLUB",
+        "code": "CCS3",
         "date": "06-12-2023",
         "brocher": "b3s3br.html",
         "ppt": "b3s3ppt.html",

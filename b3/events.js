@@ -53,12 +53,12 @@ fetch('events.json')
     
     function checkDateTime() {
         const currentDate = new Date();
-        const startDate = new Date("2023-12-06T13:45:00");
-        const endDate = new Date("2023-12-06T16:45:00");   
+        const startDate = new Date("2023-12-11T18:15:00");
+        const endDate = new Date("2023-12-11T20:45:00");   
 
         if (currentDate >= startDate && currentDate <= endDate) {
             window.open("https://meet.google.com/uuf-xufw-cnx", "_blank");
         } else {
-            alert("The link is only available on Every Wednesdays between 1:45 PM to 4:45 PM.");
+            alert("The link is only available on 11/Dec/2023 (Monday) between 06:30 PM to 08:45 PM.");
         }
     }
