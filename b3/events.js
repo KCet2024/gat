@@ -59,6 +59,6 @@ fetch('events.json')
         if (currentDate >= startDate && currentDate <= endDate) {
             window.open("https://meet.google.com/uuf-xufw-cnx", "_blank");
         } else {
-            alert("The link is only available on 11/Dec/2023 (Monday) between 06:30 PM to 08:45 PM.");
+            alert("The link is only available on 11/Dec/2023 (Monday) between 06:15 PM to 08:45 PM.");
         }
     }
