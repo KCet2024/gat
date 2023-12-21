@@ -553,12 +553,27 @@ hr {
     height: 550px !important;
 }
 
+.nav-cc{
+    background-color: #021001;
+}
+
 .background-radial-gradient2{
-    background: rgb(34,193,195);
-    background: -moz-linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(9,9,121,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(9,9,121,1) 100%);
-    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(9,9,121,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#090979",GradientType=1);
+    background-color: #a0dc88;
+    color: #000000;
+}
+
+.button-remove{
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+}
+
+.text-cc1{
+    color: #000000 !important;
+}
+
+.text-cc2{
+    color: #ffffff !important;
 }
 
 .background-radial-gradient {

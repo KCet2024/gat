@@ -41,7 +41,7 @@ fetch('ccs3.json')
     .then(response => response.json())
     .then(events => {
         // Populate the Event Table
-        const eventTableBody = document.getElementById('form2TableBody');
+        const eventTableBody = document.getElementById('form3TableBody');
         events.forEach(event => {
             eventTableBody.innerHTML += `
                 <tr>
@@ -50,6 +50,25 @@ fetch('ccs3.json')
                     <td>${event.ccs3q1}</td>
                     <td>${event.ccs3q2}</td>
                     <td>${event.ccs3q3}</td>
+                </tr>
+            `;
+        });
+    })
+    .catch(error => console.error('Error fetching events data:', error));
+
+fetch('ccs4.json')
+    .then(response => response.json())
+    .then(events => {
+        // Populate the Event Table
+        const eventTableBody = document.getElementById('form4TableBody');
+        events.forEach(event => {
+            eventTableBody.innerHTML += `
+                <tr>
+                    <td>${event.usn}</td>
+                    <td>${event.name}</td>
+                    <td>${event.ccs4q1}</td>
+                    <td>${event.ccs4q2}</td>
+                    <td>${event.ccs4q3}</td>
                 </tr>
             `;
         });

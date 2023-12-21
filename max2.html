@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Data</title>
+    <!-- Include Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Google Sheets Data</h1>
+        <div id="cards-container" class="row">
+            <!-- Cards will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Replace YOUR_API_KEY with your actual API key
+        const apiKey = 'AIzaSyDiuGKNCVSiJKuutqjXhhNN7fhhB3CnM_E';
+        // Replace YOUR_SHEET_ID with your actual Google Sheet ID
+        const sheetId = '12vAVKbCeUDoB5dcUDPpzwlr_kLMUlQu-R3-makzDwxE';
+        // Replace YOUR_RANGE with the range of data you want to fetch (e.g., Sheet1!A1:F10)
+        const range = 'Sheet1!B1:G10';
+
+        // Google Sheets API URL
+        const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+
+        // Function to fetch data from Google Sheets API
+        async function fetchData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                displayData(data.values);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Function to display data in Bootstrap cards
+        function displayData(values) {
+            const cardsContainer = document.getElementById('cards-container');
+
+            // Create cards with data
+            for (let i = 1; i < values.length; i++) {
+                const card = document.createElement('div');
+                card.className = 'col-md-4'; // Adjust the column width as needed
+
+                const cardBody = document.createElement('div');
+                cardBody.className = 'card mb-4';
+
+                // Display Email address
+                const email = document.createElement('p');
+                email.className = 'card-text';
+                email.innerHTML = `<strong>Email address:</strong> ${values[i][1]}`;
+                cardBody.appendChild(Email);
+
+                // Display USN
+                const usn = document.createElement('p');
+                usn.className = 'card-text';
+                usn.innerHTML = `<strong>USN:</strong> ${values[i][1]}`;
+                cardBody.appendChild(usn);
+
+                // Display Name
+                const name = document.createElement('p');
+                name.className = 'card-text';
+                name.innerHTML = `<strong>Name:</strong> ${values[i][2]}`;
+                cardBody.appendChild(name);
+
+                // Display Certificate From
+                const certFrom = document.createElement('p');
+                certFrom.className = 'card-text';
+                certFrom.innerHTML = `<strong>Certificate From:</strong> ${values[i][3]}`;
+                cardBody.appendChild(certFrom);
+
+                // Display Certificate Issued On
+                const certIssuedOn = document.createElement('p');
+                certIssuedOn.className = 'card-text';
+                certIssuedOn.innerHTML = `<strong>Certificate Issued On:</strong> ${values[i][4]}`;
+                cardBody.appendChild(certIssuedOn);
+
+                // Display image in the card
+                const img = document.createElement('img');
+                img.src = `URL_TO_YOUR_IMAGE_FOLDER/${values[i][0]}.jpg`; // Assuming the first column contains the image file names
+                img.className = 'card-img-top';
+                img.alt = 'Card Image';
+                cardBody.appendChild(img);
+
+                card.appendChild(cardBody);
+                cardsContainer.appendChild(card);
+            }
+        }
+
+        // Fetch data when the page loads
+        window.onload = fetchData;
+    </script>
+
+</body>
+</html>

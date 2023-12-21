@@ -1,315 +1,72 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<title>Mark Sheet</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body, html {
-	height:100%;
-	font-family: 'Poppins', sans-serif;
-	background:#f1f8e9b8;
-	font-size:15px;
-	margin:0px auto;
-}
-table {
-	width:100%;
-	border-collapse: collapse;
-	max-width:600px;
-	margin-bottom:30px!important;
-	margin-top:30px!important;
-	margin:0px auto;
-}
-table tr th {
-	font-weight:600;
-}
-table tr td, table tr th {
-	padding:7px 10px;
-	border: 1px solid #818181;
-	text-align:left;
-	width:300px;
-	font-size:14px;
-	font-weight:500;
-}
-input {
-	padding: 10px;
-	background:transparent;
-	height:20px;
-	width: 230px;
-	border: 1px solid #999999;
-	border-radius: 4px;
-	font-size:14px;
-	-outline:none;
-}
-mark {
-	font-size:26px;
-	font-weight:bold;
-	color:#FF5722;
-}
-p{
-	font-size:14px;
-}
-h1, h2, p {
-	padding:0px;
-	margin:0px;
-	text-align:center;
-}
-address {
-	font-size:13px;
-	text-align:center;
-}
-h1 {
-	margin-top:20px;
-	font-size:35px;
-	font-weight:800;
-}
-h2 {
-	margin-top:10px;
-	font-size:18px;
-}
-.fname {
-	font-family: 'PT Serif Caption', serif;
-	    border-bottom: 2px dotted black;
-	margin-bottom:10px;
-}
-.fname b{
-    border-bottom: 3px solid #f2f8eb;
-    padding-right:5px;
-}
-.student tr {
-    border: none;
-    padding: 5px 0px;
-    display: flex;
-}
-.student th, .student td{
-	border:none;
-}
-.student th{
-	width:80px;
-	padding-bottom: 0px;
-}
-.student td{
-	border-bottom: 2px dotted black;
-    padding:0px;
-}
-.student td span{
-    position: relative;
-    top: 6px;
-}
-.col-blue{font-size:16px;color:#2196F3;}
-.col-green{font-size:16px;color:green;}
-.col-red{ font-size:16px;color:red; }
-</style>
-</head>
-<body>
-<div style="max-width:550px;margin:0px auto;">
-  <h1>MY FAVORITE COLLEGE</h1>
-  <p>(Recognized By Dezven Group <b>Dezven.com</b>)</p>
-  <address>
-  Address 2:186, 3rd floor, near Hotel Galaxy Star, Near Sargam Cinema, Zone-II, Maharana Pratap Nagar, Bhopal, Madhya Pradesh 462011
-  </address>
-  <h2>My Mark Sheet</h2>
-  <table class="student">
-   <tr><th>Name : </th><td colspan="3"><span>Shail Dezven</span></td></tr>
-   <tr><th>Class : </th><td><span>Semester Vii</span></td><th>Section : </th><td><span>A</span></td></tr>
-   <tr><th>Roll No. : </th><td colspan="3"><span>100008000</span></td></tr>
-  </table>
-
-<table class="table">
-  <tr>
-    <th>Subject</th>
-    <th>Marks</th>
-    <th>Grade</th>
-  </tr>
-  <tr>
-    <td>Data Structure</td>
-    <td><input type="number" placeholder="Enter Marks..." class="marks"/></td>
-    <td class="grade"></td>
-  </tr>
-  <tr>
-    <td>Operating Systems</td>
-    <td><input type="number" placeholder="Enter Marks..." class="marks"/></td>
-    <td class="grade"></td>
-  </tr>
-  <tr>
-    <td>Engineering Chemistry</td>
-    <td><input type="number" placeholder="Enter Marks..." class="marks"/></td>
-    <td class="grade"></td>
-  </tr>
-  <tr>
-    <td>Engineering Graphics</td>
-    <td><input type="number" placeholder="Enter Marks..." class="marks"/></td>
-    <td class="grade"></td>
-  </tr>
-  <tr>
-    <td>Computer Programming</td>
-    <td><input type="number" placeholder="Enter Marks..." class="marks"/></td>
-    <td class="grade"></td>
-  </tr>
-  <tr>
-    <td>Discrete Mathematics</td>
-    <td><input type="number" placeholder="Enter Marks..." class="marks"/></td>
-    <td class="grade"></td>
-  </tr>
-  
-</table>
-<table>
-  <tr>
-    <td>Total Marks :</td>
-    <td id="totalmarks"></td>
-  </tr>
-  <tr>
-    <td>Perentage :</td>
-    <td id="percentage"></td>
-  </tr>
-  <tr>
-    <td>Final Grade :</td>
-    <td id="finalgrade"></td>
-  </tr>
-</table>
-</div>
-<script>
-document.addEventListener('keyup', function (event) {
-									 
-var totalmarks = 0;
-var x = document.getElementsByClassName("marks");
-for(var i = 0; i<x.length; i++){
-
-if(x[i].value!='')	{
-
-if(parseFloat(x[i].value)>90)
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-green">Grade A</mark>';
-}
-else if(parseFloat(x[i].value)>80)
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-blue">Grade B</mark>';
-}
-else if(parseFloat(x[i].value)>70)
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-blue">Grade C</mark>';
-}
-else if(parseFloat(x[i].value)>60)
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-blue">Grade D</mark>';
-}
-else if(parseFloat(x[i].value)>50)
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-blue">Grade E</mark>';
-}
-else if(parseFloat(x[i].value)>40)
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-blue">Grade F</mark>';
-}		
-else 
-{
- document.getElementsByClassName("grade")[i].innerHTML='<mark class="col-red">Fail</mark>';
-}
- totalmarks += parseFloat(x[i].value);
-}
-}
-
-document.getElementById('totalmarks').innerHTML='<mark>'+totalmarks +' / 500</mark>';
-
-var percentage = parseFloat(totalmarks)/5;
-
-document.getElementById('percentage').innerHTML='<mark>'+percentage +' %</mark>';
-
-if(parseFloat(percentage)>90)
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-green">Grade A</mark>';
-}
-else if(parseFloat(percentage)>80)
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-blue">Grade B</mark>';
-}
-else if(parseFloat(percentage)>70)
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-blue">Grade C</mark>';
-}
-else if(parseFloat(percentage)>60)
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-blue">Grade D</mark>';
-}
-else if(parseFloat(percentage)>50)
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-blue">Grade E</mark>';
-}
-else if(parseFloat(percentage)>40)
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-blue">Grade F</mark>';
-}		
-else 
-{
- document.getElementById("finalgrade").innerHTML='<mark class="col-red">Fail</mark>';
-}
-});
-</script>
-</body>
-</html> -->
-
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Data</title>
 </head>
 <body>
-  <form>
-    <!-- Email input -->
-    <div class="form-outline mb-4">
-      <input type="email" id="form2Example1" class="form-control" />
-      <label class="form-label" for="form2Example1">Email address</label>
-    </div>
-  
-    <!-- Password input -->
-    <div class="form-outline mb-4">
-      <input type="password" id="form2Example2" class="form-control" />
-      <label class="form-label" for="form2Example2">Password</label>
-    </div>
-  
-    <!-- 2 column grid layout for inline styling -->
-    <div class="row mb-4">
-      <div class="col d-flex justify-content-center">
-        <!-- Checkbox -->
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-          <label class="form-check-label" for="form2Example31"> Remember me </label>
-        </div>
-      </div>
-  
-      <div class="col">
-        <!-- Simple link -->
-        <a href="#!">Forgot password?</a>
-      </div>
-    </div>
-  
-    <!-- Submit button -->
-    <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-  
-    <!-- Register buttons -->
-    <div class="text-center">
-      <p>Not a member? <a href="#!">Register</a></p>
-      <p>or sign up with:</p>
-      <button type="button" class="btn btn-link btn-floating mx-1">
-        <i class="fab fa-facebook-f"></i>
-      </button>
-  
-      <button type="button" class="btn btn-link btn-floating mx-1">
-        <i class="fab fa-google"></i>
-      </button>
-  
-      <button type="button" class="btn btn-link btn-floating mx-1">
-        <i class="fab fa-twitter"></i>
-      </button>
-  
-      <button type="button" class="btn btn-link btn-floating mx-1">
-        <i class="fab fa-github"></i>
-      </button>
-    </div>
-  </form>  
+
+    <h1>Google Sheets Data</h1>
+    <table id="data-table">
+        <!-- Data will be displayed here -->
+    </table>
+
+    <script>
+        // Replace YOUR_API_KEY with your actual API key
+        const apiKey = 'AIzaSyDiuGKNCVSiJKuutqjXhhNN7fhhB3CnM_E';
+        // Replace YOUR_SHEET_ID with your actual Google Sheet ID
+        const sheetId = '12vAVKbCeUDoB5dcUDPpzwlr_kLMUlQu-R3-makzDwxE';
+        // Replace YOUR_RANGE with the range of data you want to fetch (e.g., Sheet1!A1:B10)
+        const range = 'Form-1!';
+
+        // Google Sheets API asdasdsada`1`2
+        const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+
+        // Function to fetch data from Google Sheets API
+        async function fetchData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                displayData(data.values);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Function to display data in HTML table
+        function displayData(values) {
+            const table = document.getElementById('data-table');
+
+            // Clear existing table content
+            table.innerHTML = '';
+
+            // Create table header
+            const headerRow = document.createElement('tr');
+            values[0].forEach(cell => {
+                const th = document.createElement('th');
+                th.textContent = cell;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            // Create table rows with data
+            for (let i = 1; i < values.length; i++) {
+                const row = document.createElement('tr');
+                values[i].forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    row.appendChild(td);
+                });
+                table.appendChild(row);
+            }
+        }
+
+        // Fetch data when the page loads
+        window.onload = fetchData;
+    </script>
+
 </body>
 </html>
