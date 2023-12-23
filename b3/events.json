@@ -1,6 +1,14 @@
 [
     {
         "title": "CODING CLUB",
+        "code": "CCS5",
+        "date": "23-12-2023",
+        "brocher": "ccs5br.html",
+        "ppt": "ccs5ppt.html",
+        "host": "Bhuvan A R & Sahana Y"
+    },
+    {
+        "title": "CODING CLUB",
         "code": "CCS4",
         "date": "11-12-2023",
         "brocher": "ccs4br.html",
