@@ -18,7 +18,7 @@ fetch('users.json')
             <p><strong>Department:</strong> ${loggedInUser.dept}</p>
             <p><strong>Email:</strong> ${loggedInUser.email}</p>
             <p class="card-text"><strong>FeedBack Form Link: </strong>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScKxwGKh6_nFnkQFqsHJD4hK1kL3JtjPztMAIO0bFbAo3hvNw/viewform?usp=pp_url&entry.1646666979=${loggedInUser.username}&entry.35432092=${loggedInUser.name}&entry.402664451=${loggedInUser.email}" class="text-cc1" target="_Blank">Click Here To Fill the FeedBack Form</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6rjN_jW1tIKchFTezzpJCdplnTEb_1MQFsoEDVziVcpRtvw/viewform?usp=pp_url&entry.1646666979=${loggedInUser.username}&entry.35432092=${loggedInUser.name}&entry.402664451=${loggedInUser.email}" class="text-cc1" target="_Blank">Click Here To Fill the FeedBack Form</a>
             </p>
             <p><a href="events.html" class="text-cc1">Click Here To See Upcoming Events</a></p>
             <br><br><br><br><br><br><br><br><br><br>
