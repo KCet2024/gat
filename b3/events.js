@@ -24,30 +24,31 @@ fetch('users.json')
 fetch('events.json')
     .then(response => response.json())
     .then(events => {
+    
         // Display events in the Events page
         const eventListContainer = document.getElementById('eventList');
         
-        if (events.length === 0) {
-            eventListContainer.innerHTML = '<p>No events available.</p>';
-        } else {
-            eventListContainer.innerHTML = '<h2 class="text-white"><b>Upcoming Event</b></h2>';
-            
-            events.forEach(event => {
-                eventListContainer.innerHTML += `
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h6 class="card-title">${event.title}</h6><br>
-                            <p class="card-text"><strong>Session Code:</strong> ${event.code}</p>
-                            <p class="card-text"><strong>Date:</strong> ${event.date}</p>
-                            <p class="card-text"><strong>Session Lead By: ${event.host}</strong></p>
-                            <p class="card-text"><strong>Google Meet Link: </strong><a id="conditionalLink" href="" onclick="checkDateTime()">Click Here To Join For Google Meet</a></p>
-                            <p class="card-text"><strong>OverView Of The Session: </strong><a href="${event.brocher}" target="_Blank">Click Here To See</a></p>
-                            <p class="card-text"><strong>PPT Of The Session: </strong><a href="${event.ppt}" target="_Blank">Click Here To See</a></p>
-                            </div>
-                    </div>
-                `;
-            });
-        }
+            if (events.length === 0) {
+                eventListContainer.innerHTML = '<p>No events available.</p>';
+            } else {
+                eventListContainer.innerHTML = '<h2 class="text-white"><b>Upcoming Event</b></h2>';
+                
+                events.forEach(event => {
+                    eventListContainer.innerHTML += `
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-title">${event.title}</h6><br>
+                                <p class="card-text"><strong>Session Code:</strong> ${event.code}</p>
+                                <p class="card-text"><strong>Date:</strong> ${event.date}</p>
+                                <p class="card-text"><strong>Session Lead By: ${event.host}</strong></p>
+                                <p class="card-text"><strong>Google Meet Link: </strong><a id="conditionalLink" href="" onclick="checkDateTime()">Click Here To Join For Google Meet</a></p>
+                                <p class="card-text"><strong>OverView Of The Session: </strong><a href="${event.brocher}" target="_Blank">Click Here To See</a></p>
+                                <p class="card-text"><strong>PPT Of The Session: </strong><a href="${event.ppt}" target="_Blank">Click Here To See</a></p>
+                                </div>
+                        </div>
+                    `;
+                });
+            }
     })
     .catch(error => console.error('Error fetching events data:', error));
     
