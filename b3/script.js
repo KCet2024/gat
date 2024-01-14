@@ -7,7 +7,7 @@ function validateLogin() {
         .then(response => response.json())
         .then(users => {
             // Check if the entered credentials match any user in the data
-            const loggedInUser = users.find(user => user.username === usernameInput && user.password === passwordInput);
+            const loggedInUser = users.find(user => user.username === usernameInput  && user.password === passwordInput);
 
             if (loggedInUser) {
                 // Redirect to the dashboard page with the user's ID as a query parameter

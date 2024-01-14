@@ -641,6 +641,11 @@ hr {
     fill: #86BEFF;
 }
 
+
+.hidden{
+    display: none;
+}
+
 /** For mobile devices **/
 @media (max-width: 767px) {
     .custom-shape-divider-bottom-1701626136 svg {

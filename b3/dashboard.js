@@ -48,12 +48,15 @@ function logout() {
 
 function checkDateTime() {
     const currentDate = new Date();
-    const startDate = new Date("2024-01-03T13:45:00");
-    const endDate = new Date("2024-01-03T16:15:00");   
+    const startDate = new Date("2024-01-15T15:45:00");
+    const endDate = new Date("2024-01-15T17:15:00");   
 
     if (currentDate >= startDate && currentDate <= endDate) {
         window.open("https://meet.google.com/uuf-xufw-cnx", "_blank");
     } else {
-        alert("The link is only available on 03/JAN/2024 (Wednesday) between 13:45 PM to 16:15 PM.");
+        alert("The link is only available on 15/JAN/2024 (Monday) between 15:45 PM to 17:15 PM.");
     }
 }
+
+
+
