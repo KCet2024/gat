@@ -32,6 +32,7 @@ fetch('users.json')
             </p>
             <!--<p><a href="events.html" class="text-cc1">Click Here To See Upcoming Events</a></p>-->
             <br><br><br><br><br><br><br><br><br><br>
+
         `;
         } else {
             // If there is no logged-in user or invalid userId, redirect to the login page
@@ -49,7 +50,7 @@ function logout() {
 function checkDateTime() {
     const currentDate = new Date();
     const startDate = new Date("2024-01-15T15:45:00");
-    const endDate = new Date("2024-01-15T17:15:00");   
+    const endDate = new Date("2024-01-15T17:15:00");
 
     if (currentDate >= startDate && currentDate <= endDate) {
         window.open("https://meet.google.com/uuf-xufw-cnx", "_blank");
@@ -57,6 +58,3 @@ function checkDateTime() {
         alert("The link is only available on 15/JAN/2024 (Monday) between 15:45 PM to 17:15 PM.");
     }
 }
-
-
-

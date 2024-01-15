@@ -1,5 +1,15 @@
 [
     {
+        "slno": "0",
+        "id": "Admin",
+        "username": "Admin",
+        "password": "Admin@cc",
+        "name": "Admin",
+        "email": "gataiml2327@gmail.com",
+        "phone": "NaN",
+        "dept": "AI & ML"
+    },
+    {
         "slno": "1",
         "id": "1GA23AI011-T",
         "username": "1GA23AI011-T",
