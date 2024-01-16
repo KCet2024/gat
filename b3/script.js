@@ -3,7 +3,7 @@ function validateLogin() {
     const passwordInput = document.getElementById('password').value;
 
     // Fetch user data from JSON file (replace with your actual JSON file path)
-    fetch('b3/users.json')
+    fetch('users.json')
         .then(response => response.json())
         .then(users => {
             // Check if the entered credentials match any user in the data
@@ -11,7 +11,7 @@ function validateLogin() {
 
             if (loggedInUser) {
                 // Redirect to the dashboard page with the user's ID as a query parameter
-                window.location.href = `/dashboard.html?userId=${loggedInUser.id}`;
+                window.location.href = `dashboard.html?userId=${loggedInUser.id}`;
             } else {
                 alert('Invalid username or password');
             }
