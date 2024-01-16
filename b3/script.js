@@ -3,7 +3,7 @@ function validateLogin() {
     const passwordInput = document.getElementById('password').value;
 
     // Fetch user data from JSON file (replace with your actual JSON file path)
-    fetch('users.json')
+    fetch('b3/users.json')
         .then(response => response.json())
         .then(users => {
             // Check if the entered credentials match any user in the data
