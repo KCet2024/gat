@@ -11,7 +11,7 @@ function validateLogin() {
 
             if (loggedInUser) {
                 // Redirect to the dashboard page with the user's ID as a query parameter
-                window.location.href = `dashboard.html?userId=${loggedInUser.id}`;
+                window.location.href = `/dashboard.html?userId=${loggedInUser.id}`;
             } else {
                 alert('Invalid username or password');
             }
