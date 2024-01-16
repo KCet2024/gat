@@ -18,6 +18,22 @@ fetch('users.json')
     })
     .catch(error => console.error('Error fetching user data:', error));
 
+fetch('users.json')
+    .then(response => response.json())
+    .then(users => {
+        // Populate the User Table
+        const clubMembers = document.getElementById('clubMembers');
+        users.forEach(user => {
+            clubMembers.innerHTML += `
+                <tr>
+                    <td scope="row">${user.name}</td>
+                    <td scope="row">${user.dept}</td>
+                </tr>
+            `;
+        });
+    })
+    .catch(error => console.error('Error fetching user data:', error));
+
 // Fetch events data from JSON file (replace with your actual JSON file path)
 fetch('events.json')
     .then(response => response.json())

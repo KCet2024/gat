@@ -646,6 +646,46 @@ hr {
     display: none;
 }
 
+.background-gat{
+    background-image: url(../contents/Global-Academy-of-Technology.png);
+    height: 240px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-1{
+    color: white;
+}
+
+.text-line{
+    text-decoration: underline;
+}
+
+.br-sh{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** For mobile devices **/
 @media (max-width: 767px) {
     .custom-shape-divider-bottom-1701626136 svg {
@@ -709,6 +749,9 @@ hr {
     .h-img{
         display: none;
     }
+    .br-sh{
+        display: none;
+    }
 
 }
 
@@ -725,6 +768,9 @@ hr {
         min-width: 200px;
         width: 80vw;
     }
+    .br-sh{
+        display: none;
+    }
 }
 
 
@@ -735,6 +781,9 @@ hr {
         height: 50px;
     }
     .h-img{
+        display: none;
+    }
+    .br-sh{
         display: none;
     }
 }
@@ -749,7 +798,9 @@ hr {
         width: 400px;
         height: 65px;
     }
-
+    .br-sh{
+        display: none;
+    }
 
 }
 
@@ -761,9 +812,17 @@ hr {
         width: 90%;
         height: 500px;
     }
+    .br-sh{
+        display: block;
+    }
+    
 }
 
-@media (min-width:992px) {}
+@media (min-width:992px) {
+    .br-sh{
+        display: block;
+    }
+}
 
 @media (min-width:1200px) {
     .forms {
