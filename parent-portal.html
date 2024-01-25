@@ -1,48 +1,371 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta Signs -->
+    <title>Contineo - Bringing Happiness to work and study places!</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="contineo, Contineo" />
+    <meta name="description" content="contineo" />
+    <meta name="generator" content="contineo" />
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="Website" />
-    <meta property="og:site_name" content="AI & ML │ Global Academy Of Technology" />
-    <meta property="og:description" content="Dept. OF AI & ML │ Global Academy Of Technology" />
-    <meta property="og:title" content="Dept. OF AI & ML @ GAT" />
-    <meta name="image" property="og:image" content="https://gat-aiml.vercel.app/contents/Gat-Fav.png" />
-    <meta http-equiv="refresh" content="0; url=https://globalparents.contineo.in">
-    <!-- Title Icon --->
-    <title>Global Academy Of Technology</title>
-    <link rel="shortcut icon" href="contents/Gat-Fav.png">
-    <!-- Latest compiled and minified CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/date.js"></script>
-    <!-- Box Icons Links -->
-    <script src="https://kit.fontawesome.com/89b3df4f3f.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="shortcut icon" href="templates/contineoReg/img/logo.png" type="image/x-icon"/> -->
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/uikit.css" />
+    <link rel="shortcut icon" href="https://globalparents.contineo.in/newparents/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/js/uikit.min.js"></script>
+    <script src="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/billboard.css" />
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/billboard.min.css" />
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/insight.min.css" />
+    <link rel="stylesheet" href="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/src/scss/css/insight.css" />
+    <script src="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/js/billboard.js"></script>
+    <script src="https://globalparents.contineo.in/newparents/templates/contineoReg/assets/js/billboard.pkgd.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
 </head>
+<body id="">
+    <form action="https://globalparents.contineo.in/newparents/index.php" method="POST" name="log">
+        <input type="hidden" name="option" value="com_user">
+        <input type="hidden" name="task" value="logout">
+        <input type="hidden" name="return" value="�w^Ƙi">
+    </form>
+    <script type="text/javascript">
+        function closeMe() {
+            document.getElementById('atPopup').style.display = "none";
+            document.getElementById('blackOverlay').style.display = "none";
+        }
+        function popUp(date) {
+            var due = date;
+            var split = due.split('|||');
+            document.getElementById('due').innerHTML = split[0];
+            document.getElementById('due2').innerHTML = split[1];
+            document.getElementById('atPopup').style.display = "block";
+            document.getElementById('blackOverlay').style.display = "block";
+        }
 
-<body>
-    <main>
-        <section>
-            <img src="contents/Gat-Banner.png" alt="Gat-Banner" class="w-100">
-        </section>
-    </main>
-    <footer style="top: 85%;">
-        <div class="footer mt-auto w-100 h-100 align-text-center py-3 bg-dark">
-            <div class="container">
-                <span class="text-white">
-                    <p class="text-secondary">
-                        &copy;&nbsp; 2024 Copyrights. All Rights Reserved.
-                        Partnership With <a href="https://www.vercel.com" class="text-secondary vercel">Vercel.com &amp; Vercel.app</a>
-                    </p>
-                </span>
+        function putdate() {
+
+            var dd = document.getElementById('dd').value;
+            var mm = document.getElementById('mm').value;
+            var yyyy = document.getElementById('yyyy').value;
+            var dobs = dd + '' + mm + '' + yyyy;
+            // alert(dd+mm);
+            // var dobs = dd+mm+yyyy; 
+            // alert(dobs);
+            document.getElementById('passwd').value = dobs.trim();
+
+        }
+        function check() {
+
+            /*var dd = document.getElementById('dd').value;
+            var mm = document.getElementById('mm').value;
+            var yyyy = document.getElementById('yyyy').value;
+            var dobs = yyyy+'-'+mm+'-'+dd;*/
+            var currentdate = document.getElementById('passwd').value;
+
+            var randsting = '';
+            for (i = 0; i < currentdate.length; i++) {
+                randsting += currentdate.charAt(i) + randomstring(2);
+            }
+            var encodedString = btoa(randsting);
+            document.getElementById('passwd').value = currentdate;//encodedString;
+            document.getElementById('password').value = currentdate;// encodedString;
+            return true;
+        }
+
+        function randomstring(L) {
+            var s = '';
+            var randomchar = function () {
+                var n = Math.floor(Math.random() * 62);
+                if (n < 10) return n; //1-10
+                if (n < 36) return String.fromCharCode(n + 55); //A-Z
+                return String.fromCharCode(n + 61); //a-z
+            }
+            while (s.length < L) s += randomchar();
+            return s;
+        }
+    </script>
+
+    <style>
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            /* padding-top: 100px; */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 10px 20px;
+            border: 1px solid #888;
+            width: 50%;
+            position: relative;
+            top: 33%;
+        }
+
+        .modal-content h3 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #c62020 !important;
+
+        }
+
+        /* The Close Button */
+        .close {
+            color: #393939;
+            float: right;
+            font-size: 38px;
+            font-weight: bold;
+            line-height: 23px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (max-width: 639px){
+            .moblie-none{
+                display: none;
+            }
+        }
+    </style>
+    <div id="myloginModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Login Failed</h3>
+
+            <p style="text-align: center; font-size:18px">
+                You have entered an invalid USN or password.
+            </p>
+            <p style="text-align: center; color: red; font-size:18px">
+                attempts remaining
+            </p>
+        </div>
+    </div>
+    <div class="cn-landing uk-grid uk-grid-stack" uk-grid="" uk-height-match="target: > div > .uk-card">
+        <div class="uk-width-3-5@l uk-width-3-5@m uk-width-1-2@s" style="height: 200px !important;">
+            <div class="uk-card uk-card-default uk-card-body cn-bgpart1">
+                <div class="cn-logo">
+                    <a href="#!" rel="home">
+                        <div class="cn-logo-image cn-big-logo">
+                            <img src="https://globalparents.contineo.in/newparents/images/logo.png" alt="logo" width="110px">
+                        </div>
+                    </a>
+                    <div class="cn-landinglogo-text cn-landing-logo">
+                        <a class="cn-heading" href="#!" rel="home">Global Academy of Technology,<br>Bengaluru</a>
+                    </div>
+                </div>
+                <div class="moblie-none">
+                    <div class="cn-welcome">
+                        <article class="uk-article">
+                            <h2 class="uk-article-title"><a class="uk-link-reset" href="">Welcome to GAT</a></h2>
+                            <p>Established in 2001, the Global Academy of Technology is spread over the 8-acre campus in
+                                Bangalore. It provides undergraduate and postgraduate degrees in the field of Engineering
+                                and Technology. It mainly offers these degrees in six core engineering subjects. The Global
+                                Academy of Technology - GAT - is affiliated to the Visvesvaraya Technological University.
+                                The college is known to provide excellent placements for the courses.</p>
+    
+                        </article>
+                        <div class="uk-width-1-1 uk-first-column">
+                            <div class="uk-card uk-card-default uk-card-body cn-cal-events">
+                                <div class="uk-clearfix">
+                                    <div class="uk-float-left">
+                                        <div class="uk-card">
+                                            <a href="#!">
+                                                <h3>Notice Board</h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-panel uk-panel-scrollable cn-events">
+                                    <ul class="uk-list">
+                                        <li style="font-size:16px;"><span class="uk-margin-small-right"
+                                                uk-icon="icon: info"></span>Welcome to the preview of the new mobile friendly parent portal</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="cn-absolute"> Copyright © Powered By <a href="http://www.contineo.in/" target="_blanks">Contineo</a></div> -->
+            </div>
+        </div>
+
+
+
+
+        <div class="uk-width-2-5@l uk-width-2-5@m uk-width-1-2@s cn-pad-left0">
+            <div class="uk-card uk-card-default uk-card-body cn-bgpart2">
+                <div class="uk-vertical-align-middle cn-form-box">
+                    <form id="login-form" action="https://globalparents.contineo.in/newparents/index.php" method="post">
+                        <h3>Login to Your Account</h3>
+                        <form class="cn-landing-login">
+                            <div class="uk-margin">
+                                <div class="uk-inline uk-width-1-1">
+                                    <span class="" style="color:#fff; font-size:16px;"> Username </span>
+                                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                    <input class="uk-input uk-form-large" type="text" required AUTOCOMPLETE="off"
+                                        name="username" id="username" placeholder="USN">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-inline uk-width-1-1">
+                                    <label style="color:#fff; font-size:16px;">Password</label>
+                                    <div class="uk-flex">
+                                        <!-- DOB password start -->
+                                        <!-- <span class="uk-form-icon" uk-icon="icon: lock"></span> -->
+                                        <!-- <input type="password" class="uk-input uk-form-large" AUTOCOMPLETE="off"  required name="password" id="password"  placeholder="DDMMYYYY"> -->
+                                        <select name="dd" class="validate[required] inputselectday uk-select" id="dd"
+                                            required="">
+                                            <option disabled selected value=''>Day</option>
+                                            <option value='01'>01</option>
+                                            <option value='02'>02</option>
+                                            <option value='03'>03</option>
+                                            <option value='04'>04</option>
+                                            <option value='05'>05</option>
+                                            <option value='06'>06</option>
+                                            <option value='07'>07</option>
+                                            <option value='08'>08</option>
+                                            <option value='09'>09</option>
+                                            <option value='10'>10</option>
+                                            <option value='11'>11</option>
+                                            <option value='12'>12</option>
+                                            <option value='13'>13</option>
+                                            <option value='14'>14</option>
+                                            <option value='15'>15</option>
+                                            <option value='16'>16</option>
+                                            <option value='17'>17</option>
+                                            <option value='18'>18</option>
+                                            <option value='19'>19</option>
+                                            <option value='20'>20</option>
+                                            <option value='21'>21</option>
+                                            <option value='22'>22</option>
+                                            <option value='23'>23</option>
+                                            <option value='24'>24</option>
+                                            <option value='25'>25</option>
+                                            <option value='26'>26</option>
+                                            <option value='27'>27</option>
+                                            <option value='28'>28</option>
+                                            <option value='29'>29</option>
+                                            <option value='30'>30</option>
+                                            <option value='31'>31</option>
+                                        </select>
+
+                                        <select name="mm" class="validate[required] inputselectmon uk-select" id="mm"
+                                            required="">
+                                            <option disabled selected value=''>Month</option>
+                                            <option value='01'>Jan</option>
+                                            <option value='02'>Feb</option>
+                                            <option value='03'>Mar</option>
+                                            <option value='04'>Apr</option>
+                                            <option value='05'>May</option>
+                                            <option value='06'>Jun</option>
+                                            <option value='07'>Jul</option>
+                                            <option value='08'>Aug</option>
+                                            <option value='09'>Sep</option>
+                                            <option value='10'>Oct</option>
+                                            <option value='11'>Nov</option>
+                                            <option value='12'>Dec</option>
+                                        </select>
+
+                                        <select name="yyyy" class="validate[required] inputselectyear uk-select"
+                                            id="yyyy" required="" onchange="putdate()">
+                                            <option disabled selected value=''> Year </option>
+                                            <option value='2000'>2000</option>
+                                            <option value='2001'>2001</option>
+                                            <option value='2002'>2002</option>
+                                            <option value='2003'>2003</option>
+                                            <option value='2004'>2004</option>
+                                            <option value='2005'>2005</option>
+                                            <option value='2006'>2006</option>
+                                            <option value='2007'>2007</option>
+                                            <option value='2008'>2008</option>
+                                            <option value='2009'>2009</option>
+                                        </select>
+
+                                        <input type="hidden" id="remember" name="remember" value="No" alt="Remember Me"
+                                            readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <input type="submit"
+                                    class="uk-button uk-button-primary uk-button-large uk-width-1-1 cn-login-btn cn-submit1 cn-landing-login1"
+                                    value="Login" onClick="return check()">
+
+
+                                <input type="hidden" id="passwd" name="passwd" AUTOCOMPLETE="off" readonly> <input
+                                    type="hidden" name="option" value="com_user" readonly>
+                                <input type="hidden" name="task" value="login" readonly>
+                                <input type="hidden" name="return" value="�w^Ƙi" readonly>
+                                <input type="hidden" name="return" value="" readonly />
+                                <input type="hidden" name="d3b6a326f8462ac80df05814306a1c40" value="1" />
+
+                                <!-- <a class="uk-float-right uk-link uk-link-muted cn-forgot-pwd" href="#">Forgot Password?</a> -->
+                            </div>
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="uk-clearfix cn-footer-text">
+            <div class="uk-float-left">
+                <p class="uk-text-left">
+                    Copyright © Powered By <a href="http://www.contineo.in/" target="_blanks">Contineo</a>
+                </p>
+            </div>
+            <div class="uk-float-right">
+                <p class="uk-text-right terms"><a href="#!">Terms of Service</a> | <a href="#!">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myloginModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Check the condition and open the modal if true
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
 </body>
+
+
 
 </html>
