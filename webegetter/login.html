@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: auto;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container login-container">
+  <h2 class="text-center">Login</h2>
+  <form id="loginForm">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" required>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" required>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Predefined user and admin data in JSON format
+  var usersData = {
+    "user1": "pass1",
+    "user2": "password2"
+  };
+
+  var adminsData = {
+    "admin1": "pass1",
+    "admin2": "adminpassword2"
+  };
+
+  function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Simulate authentication using predefined JSON data
+    if (usersData.hasOwnProperty(username) && usersData[username] === password) {
+      redirectToDashboard('user', username);
+    } else if (adminsData.hasOwnProperty(username) && adminsData[username] === password) {
+      redirectToDashboard('admin', username);
+    } else {
+      alert('Invalid credentials. Please try again.');
+    }
+  }
+
+  function redirectToDashboard(role, username) {
+    // Redirect to the respective dashboard page
+    var dashboardPage = role === 'user' ? 'user-dashboard.html' : 'admin-dashboard.html';
+    window.location.href = dashboardPage + '?username=' + encodeURIComponent(username);
+  }
+</script>
+</body>
+</html>
