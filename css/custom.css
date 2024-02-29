@@ -331,6 +331,15 @@ h6 {
     text-align: center;
 }
 
+#h4 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-align: left;
+    padding-left: 200px;
+}
+
 hr {
     opacity: 1 !important
 }
@@ -657,6 +666,7 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation-delay: 10s;
 }
 
 .header-1{
@@ -794,6 +804,9 @@ hr {
         width: 100px !important;
         height: 20px !important;
     }
+    #h4 {
+        padding-left: 20px;
+    }
 }
 
 @media (max-width:236px) {
@@ -806,6 +819,9 @@ hr {
     .navbar-brand img {
         width: 100px !important;
         height: 35px !important;
+    }
+    #h4 {
+        padding-left: 20px;
     }
 }
 
@@ -840,12 +856,18 @@ hr {
     .navbar-toggler-icon{
         font-size: small;
     }
+    #h4 {
+        padding-left: 20px;
+    }
 }
 
 @media (min-width:360px){
     .navbar-brand img {
         width: 200px !important;
         height: 35px !important;
+    }
+    #h4 {
+        padding-left: 20px;
     }
 }
 
@@ -869,6 +891,9 @@ hr {
     .cc-gh{
         display: none;
     }
+    #h4 {
+        padding-left: 20px;
+    }
 
 }
 
@@ -887,12 +912,21 @@ hr {
         width: 300px !important;
         height: 50px !important;
     }
+    .background-gat{
+        height: 260px;
+    }
+    #h4 {
+        padding-left: 50px;
+    }
     
 }
 
 @media (min-width:992px) {
     .br-sh{
         display: block;
+    }
+    #h4 {
+        padding-left: 200px;
     }
 }
 
@@ -916,6 +950,9 @@ hr {
     .dply-1 {
         font-weight: bold;
         font-size: 25px;
+    }
+    .background-gat{
+        height: 320px;
     }
 }
 

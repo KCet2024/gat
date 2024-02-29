@@ -8,8 +8,10 @@
 }
 
 body {
-    background-color: #aacc9e;
-    background: linear-gradient(to right, #a0dc88, #aacc9e);
+    /* background-color: #aacc9e; */
+    /* background: linear-gradient(to right, #a0dc88, #aacc9e); */
+    background-color: white;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,9 +25,10 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 425px;
     max-width: 100%;
     min-height: 480px;
+    align-content: center;
 }
 
 .container p {
@@ -36,7 +39,8 @@ body {
 }
 
 .container span {
-    font-size: 12px;
+    font-size: 16px;
+    padding-bottom: 20px;
 }
 
 .container a {
@@ -49,7 +53,7 @@ body {
 .container button {
     background-color: #147814;
     color: #fff;
-    font-size: 12px;
+    font-size: 18px;
     padding: 10px 45px;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -57,6 +61,7 @@ body {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 10px;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -75,12 +80,16 @@ body {
     height: 100%;
 }
 
+.container form h1{
+    padding-bottom: 50px;
+}
+
 .container input {
     background-color: #eee;
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
-    font-size: 13px;
+    font-size: 18px;
     border-radius: 8px;
     width: 100%;
     outline: none;
@@ -91,12 +100,13 @@ body {
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+    align-items: center;
 }
 
 .sign-in {
-    left: 0;
-    width: 50%;
-    z-index: 2;
+    /* left: 0; */
+    width: 100%;
+    /* z-index: 2; */
 }
 
 .container.active .sign-in {
